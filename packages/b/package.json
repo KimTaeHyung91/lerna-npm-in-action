@@ -1,0 +1,23 @@
+{
+  "name": "@action/b",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "james <dpwe231@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "./lib/src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "barrels": "barrelsby -c ../../barrelsby.base.json",
+    "type-check": "tsc --noEmit",
+    "build": "npm run barrels && npm run type-check && swc ./src -d ./lib --config-file ../../swc.config.json"
+  },
+  "dependencies": {
+    "tsid-ts": "^0.0.9"
+  }
+}

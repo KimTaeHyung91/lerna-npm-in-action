@@ -1,0 +1,23 @@
+{
+  "name": "@action/a",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "james <dpwe231@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/src/a.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "npm run type-check && swc ./src -d ./lib --config-file ../../swc.config.json",
+    "start": "node lib/src/a"
+  },
+  "dependencies": {
+    "@action/b": "*"
+  }
+}
